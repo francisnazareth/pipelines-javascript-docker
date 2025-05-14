@@ -16,8 +16,9 @@ stages:
     displayName: Build
     pool: fnpool1
     steps:
-      - task: Bash@3
-        inputs:
-         targetType: 'inline'
-         script: |
-          echo 'Hello world'
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'acr-svc-conn'
+        repository: 'mcitdemo'
+        command: 'buildAndPush'
+        Dockerfile: '**/app/Dockerfile'
