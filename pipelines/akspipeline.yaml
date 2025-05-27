@@ -1,7 +1,7 @@
 trigger:
 - master
 
-pool: fnpool1
+pool: rancher-pool
 
 variables:
   solution: '**/*.sln'
@@ -14,7 +14,7 @@ stages:
   jobs:  
   - job: Build
     displayName: Build
-    pool: fnpool1
+    pool: rancher-pool
     steps:
     - task: Docker@2
       inputs:
