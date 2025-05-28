@@ -19,7 +19,7 @@ stages:
     - task: PublishPipelineArtifact@1
       inputs:
         artifactName: 'manifests'
-        path: 'manifests'
+        path: 'app/manifests'
     - task: DownloadPipelineArtifact@2
       inputs:
         artifactName: 'manifests'
