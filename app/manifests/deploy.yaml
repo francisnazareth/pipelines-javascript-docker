@@ -18,3 +18,18 @@ spec:
       containers:
       - image: nginx
         name: nginx
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: nginx
+  name: nginx-svc
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    nodePort: 32000
+  selector:
+    app: nginx
+  type: NodePort
