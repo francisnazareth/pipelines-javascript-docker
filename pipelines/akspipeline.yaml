@@ -20,7 +20,7 @@ stages:
       inputs:
         buildType: 'current'
         artifactName: 'manifests'
-        targetPath: '$(Pipeline.Workspace)/manifests'
+        downloadPath: '$(Pipeline.Workspace)/manifests'
     - task: Docker@2
       inputs:
         containerRegistry: 'acr-svc-conn'
