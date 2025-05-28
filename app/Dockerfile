@@ -1,4 +1,4 @@
-FROM 3.14.0b2-alpine3.21
+FROM python:3.14.0b2-bookworm
 ENV FLASK_RUN_PORT=80
 ENV FLASK_RUN_HOST="0.0.0.0"
 
