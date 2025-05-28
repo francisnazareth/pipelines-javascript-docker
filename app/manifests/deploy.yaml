@@ -9,16 +9,12 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-app: nginx
-  strategy: {}
+      app: nginx
   template:
     metadata:
-creationTimestamp: null
-labels:
-app: nginx
+      labels:
+        app: nginx
     spec:
-containers:
-- image: nginx
-name: nginx
-resources: {}
-status: {}
+      containers:
+      - image: nginx
+        name: nginx
