@@ -1,11 +1,6 @@
-FROM python:3.14.0b2-bookworm
-ENV FLASK_RUN_PORT=80
-ENV FLASK_RUN_HOST="0.0.0.0"
-
+FROM python:3.13-slim-bookworm
 WORKDIR /python-docker
-
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 COPY . .
-EXPOSE 80
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
