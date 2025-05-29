@@ -19,7 +19,7 @@ spec:
       - image: mcitdemo.azurecr.io/ml-flask:v1
         name: nginx
       imagePullSecrets:
-      - name: acr-secret
+      - name: acrsecret
 ---
 apiVersion: v1
 kind: Service
